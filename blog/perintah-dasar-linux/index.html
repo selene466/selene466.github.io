@@ -1,0 +1,261 @@
+<!doctype html><html lang=id><head itemscope itemtype=https://himawari466.github.io/><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=googlebot content="index, follow"><title itemprop=name>Belajar perintah dasar Linux | Himawari466</title><meta property="og:locale" content="id"><meta name=language content="id"><meta property="og:title" content="Belajar perintah dasar Linux"><meta property="twitter:title" content="Belajar perintah dasar Linux"><meta itemprop=name content="Belajar perintah dasar Linux | Himawari466"><meta name=application-name content="Belajar perintah dasar Linux | Himawari466"><meta property="og:site_name" content="Himawari466"><meta name=description content="Mudah belajar perintah dasar GNU/Linux"><meta itemprop=description content="Mudah belajar perintah dasar GNU/Linux"><meta property="og:description" content="Mudah belajar perintah dasar GNU/Linux"><meta property="twitter:description" content="Mudah belajar perintah dasar GNU/Linux"><link rel=canonical href=/blog/perintah-dasar-linux/><meta name=url content="/blog/perintah-dasar-linux/"><meta property="og:url" content="/blog/perintah-dasar-linux/"><meta property="twitter:url" content="/blog/perintah-dasar-linux/"><meta property="og:locale" content="in"><meta property="og:type" content="article"><meta name=keywords content="Linux,Belajar,perintah,dasar,Linux"><meta itemprop=image content="/assets/images/blog/01-shebang.png"><meta property="og:image" content="/assets/images/blog/01-shebang.png"><meta name=twitter:image content="/assets/images/blog/01-shebang.png"><meta name=twitter:image:src content="/assets/images/blog/01-shebang.png"><meta property="og:article:published_time" content="2020-12-28T09:14:28+0700"><meta property="article:published_time" content="2020-12-28T09:14:28+0700"><meta property="og:article:author" content="Himawari466"><meta property="article:author" content="Himawari466"><meta name=author content="Himawari466"><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Belajar perintah dasar Linux","author":{"@type":"Person","name":"Himawari466"},"datePublished":"2020-12-28","description":"Mudah belajar perintah dasar GNU/Linux","wordCount":2169,"mainEntityOfPage":"True","dateModified":"2020-12-28","image":{"@type":"imageObject","url":"https://himawari466.github.io/assets/images/blog/01-shebang.png"},"publisher":{"@type":"Organization","name":"Himawari466","logo":{"@type":"imageObject","url":"https://himawari466.github.io/favicon.ico"}}}</script><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel=stylesheet type=text/css><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet><link href=/assets/fonts/mononoki/mononoki.css type=text/css rel=stylesheet media=screen><link href=/assets/css/materialize.min.css type=text/css rel=stylesheet media=screen><link href=/assets/css/main.css type=text/css rel=stylesheet media=screen><link href=/assets/css/syntax.css type=text/css rel=stylesheet media=screen><link href=/favicon.ico rel=icon sizes=32x32></head><body><nav class="red darken-2"><div class="nav-wrapper container"><a href=/ class=brand-logo>Himawari466</a>
+<a href=# data-target=mobile-demo class=sidenav-trigger><i class=material-icons>menu</i></a><ul class="right hide-on-med-and-down"><li><a href=/>Beranda</a></li><li><a href=/blog>Blog</a></li></ul></div></nav><ul class=sidenav id=mobile-demo><li><a href=/>Beranda</a></li><li><a href=/blog>Blog</a></li></ul><div class=container><div class=row><header><nav class=clean><div class=nav-wrapper><div class="col s12"><a href=/ class=breadcrumb>Beranda</a><a href=/blog class=breadcrumb>Blog</a><a href=/perintah-dasar-linux class=breadcrumb>Perintah dasar linux</a></div></div></nav></header><main class="col m12 l8"><article><h2 class="red-text text-darken-2">Belajar perintah dasar Linux</h2><br><span><i class="tiny material-icons">insert_invitation</i> Tanggal: Senin, 28 Desember 2020. 09:14:28 WIB</span><br><span><i class="tiny material-icons">perm_contact_calendar</i> Penulis: Himawari466</span><br><span><i class="tiny material-icons">local_offer</i> Tags:&nbsp;<a class=red-text href=/tags/linux>Linux</a></span><br><br><div id=TableOfContents><ol><li><a href=#membersihkan-layar-terminal--wipe-layar>Membersihkan layar terminal / wipe layar</a></li><li><a href=#mengetahui-lokasi-directory-saat-ini>Mengetahui lokasi directory saat ini</a></li><li><a href=#pindah-lokasi-directory>Pindah lokasi directory</a></li><li><a href=#mengetahui-isi-directory>Mengetahui isi directory</a></li><li><a href=#membuat-directory>Membuat directory</a></li><li><a href=#membuat-file>Membuat file</a></li><li><a href=#menghapus-directory>Menghapus directory</a></li><li><a href=#menghapus-file>Menghapus file</a></li><li><a href=#menyalin--copy-directory>Menyalin / copy directory</a></li><li><a href=#menyalin--copy-file>Menyalin / copy file</a></li><li><a href=#menganti-nama--rename-file-dan-directory>Menganti nama / rename file dan directory</a></li><li><a href=#mengidentifikasi-suatu-file>Mengidentifikasi suatu file</a></li><li><a href=#membaca-text-file>Membaca text file</a></li><li><a href=#mencari-file--directory>Mencari file / directory</a></li><li><a href=#mencari-file-yang-berisi--mengandung-suatu-kata-secara-rekursif>Mencari file yang berisi / mengandung suatu kata secara rekursif</a></li><li><a href=#file-archive-tar>File archive .tar</a></li><li><a href=#file-archive-zip>File archive .zip</a></li><li><a href=#melihat-username-user-saat-ini>Melihat username user saat ini</a></li><li><a href=#mengganti-password-user-saat-ini>Mengganti password user saat ini</a></li><li><a href=#id-user-dan-group-saat-ini>ID user dan group saat ini</a></li><li><a href=#nama-hostname-perangkat>Nama hostname perangkat</a></li><li><a href=#info-kernel-perangkat>Info kernel perangkat</a></li><li><a href=#info-distro-gnulinux>Info distro gnu/linux</a></li><li><a href=#melihat-daftar-partisi-storage-perangkat>Melihat daftar partisi storage perangkat</a></li><li><a href=#melihat-kapasitas-storage-perangkat>Melihat kapasitas storage perangkat</a></li><li><a href=#melihat-penggunakan-storage-suatu-directory>Melihat penggunakan storage suatu directory</a></li><li><a href=#melihat-riwayat--history-command-yang-telah-digunakan>Melihat riwayat / history command yang telah digunakan</a></li><li><a href=#tanggal-saat-ini>Tanggal saat ini</a></li><li><a href=#perintah-man>Perintah man</a></li><li><a href=#lebih-lanjut-perintah-echo>Lebih lanjut, perintah echo</a></li><li><a href=#lebih-lanjut-piping>Lebih lanjut, piping</a></li><li><a href=#lebih-lanjut-chaining-dengan->Lebih lanjut, chaining dengan &&</a></li><li><a href=#lebih-lanjut-chaining-dengan--1>Lebih lanjut, chaining dengan ;</a></li><li><a href=#lebih-lanjut-kill-process>Lebih lanjut, kill process</a></li><li><a href=#eskalasi-hak-akses-super-user--root>Eskalasi hak akses super user / root</a></li><li><a href=#tips-dengan-aliases>Tips dengan aliases</a></li><li><a href=#penutup>Penutup</a></li></ol></div><br><p>Halo!<br>Selamat pagi teman-teman semua, tidak terasa sudah memasuki penghujung tahun 2020, di post ketiga saya ini saya akan membagikan sedikit ilmu <strong>perintah-perintah</strong> dasar / command di <strong>gnu/linux</strong>.</p><p>Gunakan daftar isi diatas & shortcut <kbd>CTRL</kbd>+<kbd>F</kbd> untuk memudahkan pencarian konten.</p><p>Sebelum lebih jauh untuk menyamakan perspektif istilah <em>directory</em> adalah <em>folder</em>.<br>Simbol tilde (~) adalah representasi dari home folder dari suatu user.<br>$ = simbol prompt user biasa<br># = simbol prompt super user (root)</p><p>. = directory saat ini<br>.. = directory sebelumnya</p><p><br></p><h3 id=membersihkan-layar-terminal--wipe-layar>Membersihkan layar terminal / wipe layar</h3><p>Gunakan perintah <strong>clear</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ clear</code></pre></div><p><br></p><h3 id=mengetahui-lokasi-directory-saat-ini>Mengetahui lokasi directory saat ini</h3><p>Gunakan perintah <strong>pwd</strong>, akronim dari <em>print working directory</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>pwd</span>
+/home/selene
+
+$ <span class=nb>cd</span> Documents
+$ <span class=nb>pwd</span>
+/home/selene/Documents</code></pre></div><p><br></p><h3 id=pindah-lokasi-directory>Pindah lokasi directory</h3><p>Gunakan perintah <strong>cd</strong>, diikuti nama directory tujuan, akronim dari <em>change directory</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>cd</span> ~
+$ <span class=nb>cd</span> Downloads
+$ <span class=nb>pwd</span>
+/home/selene/Downloads
+
+$ <span class=nb>cd</span> /tmp
+$ <span class=nb>pwd</span>
+/tmp
+
+$ <span class=nb>cd</span> ~
+$ <span class=nb>pwd</span>
+/home/selene</code></pre></div><p>Pindah directory sebelumnya, gunakan <strong>-</strong> (strip / minus):</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>pwd</span>
+/home/selene
+
+$ <span class=nb>cd</span> /tmp
+$ <span class=nb>pwd</span>
+/tmp
+
+$ <span class=nb>cd</span> -
+$ <span class=nb>pwd</span>
+/home/selene</code></pre></div><p>Naik ke directory sebelumnya, gunakan <strong>..</strong> (double dot):</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>pwd</span>
+/home/selene
+
+$ <span class=nb>cd</span> Documents
+$ <span class=nb>pwd</span>
+/home/selene/Documents
+
+$ <span class=nb>cd</span> ..
+$ <span class=nb>pwd</span>
+/home/selene
+
+$ <span class=nb>cd</span> Documents/Data
+$ <span class=nb>pwd</span>
+/home/selene/Documents/Data
+
+$ <span class=nb>cd</span> ../..
+$ <span class=nb>pwd</span>
+/home/selene</code></pre></div><p><br></p><h3 id=mengetahui-isi-directory>Mengetahui isi directory</h3><p>Gunakan perintah <strong>ls</strong>, akronim dari <em>List</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls
+Desktop  Documents  Downloads  Pictures
+Dev      dots       Music</code></pre></div><p>Menampilkan hidden file / file tersembunyi:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -a
+Desktop  Documents  Downloads  Pictures
+Dev      dots       Music
+.file_tersembunyi</code></pre></div><p>Menampilkan secara list, <strong>d</strong> dipaling depan artinya directory / bukan file, sedangkan <strong>9 digit karakter</strong> berikutnya adalah <strong>permission</strong> (user 3, group 3, public 3), diikuti <strong>owner</strong>, lalu <strong>group owner</strong>, lalu <strong>size / ukuran</strong>, lalu <strong>tanggal modified</strong>, lalu <strong>nama directory / file</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -l
+total <span class=m>24</span>
+drwxr-xr-x  <span class=m>2</span> selene selene <span class=m>4096</span> Des <span class=m>26</span> 22:10 Desktop
+drwxr-xr-x  <span class=m>5</span> selene selene <span class=m>4096</span> Des  <span class=m>3</span> 07:41 Dev
+drwxr-xr-x  <span class=m>3</span> selene selene <span class=m>4096</span> Des <span class=m>27</span> 20:39 Documents
+drwxr-xr-x <span class=m>25</span> selene selene <span class=m>4096</span> Des  <span class=m>3</span> 11:40 dots
+drwx------ <span class=m>23</span> selene selene <span class=m>4096</span> Des <span class=m>27</span> 12:59 Downloads
+drwxrwxrwx  <span class=m>1</span> selene selene   <span class=m>13</span> Okt  <span class=m>3</span> 11:14 Music
+drwxrwxrwx  <span class=m>3</span> selene selene <span class=m>4096</span> Des <span class=m>14</span> 08:27 Pictures
+-rwxr-xr-x  <span class=m>0</span> selene selnee    <span class=m>0</span> Des <span class=m>28</span> 09:15 .file_tersembunyi</code></pre></div><p>Menampilkan size secara human readable / mudah dibaca,<br>byte menjadi satuan <strong>KB MB GB</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -lh
+total <span class=m>24</span>
+drwxr-xr-x  <span class=m>2</span> selene selene 4,0K Des <span class=m>26</span> 22:10 Desktop
+drwxr-xr-x  <span class=m>5</span> selene selene 4,0K Des  <span class=m>3</span> 07:41 Dev
+drwxr-xr-x  <span class=m>3</span> selene selene 4,0K Des <span class=m>27</span> 20:39 Documents
+drwxr-xr-x <span class=m>25</span> selene selene 4,0K Des  <span class=m>3</span> 11:40 dots
+drwx------ <span class=m>23</span> selene selene 4,0K Des <span class=m>27</span> 12:59 Downloads
+drwxrwxrwx  <span class=m>1</span> selene selene   <span class=m>13</span> Okt  <span class=m>3</span> 11:14 Music
+drwxrwxrwx  <span class=m>3</span> selene selene 4,0K Des <span class=m>14</span> 08:27 Pictures</code></pre></div><p>Menampilkan secara list, semua file, mudah dibaca, option <strong>-hal</strong> ini <strong>paling sering digunakan</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -hal
+total <span class=m>24</span>
+drwxr-xr-x  <span class=m>2</span> selene selene 4,0K Des <span class=m>26</span> 22:10 Desktop
+drwxr-xr-x  <span class=m>5</span> selene selene 4,0K Des  <span class=m>3</span> 07:41 Dev
+drwxr-xr-x  <span class=m>3</span> selene selene 4,0K Des <span class=m>27</span> 20:39 Documents
+drwxr-xr-x <span class=m>25</span> selene selene 4,0K Des  <span class=m>3</span> 11:40 dots
+drwx------ <span class=m>23</span> selene selene 4,0K Des <span class=m>27</span> 12:59 Downloads
+drwxrwxrwx  <span class=m>1</span> selene selene   <span class=m>13</span> Okt  <span class=m>3</span> 11:14 Music
+drwxrwxrwx  <span class=m>3</span> selene selene 4,0K Des <span class=m>14</span> 08:27 Pictures
+-rwxr-xr-x  <span class=m>0</span> selene selnee    <span class=m>0</span> Des <span class=m>28</span> 09:15 .file_tersembunyi</code></pre></div><p>Sort berdasarkan <strong>modified time</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -halt
+total <span class=m>24</span>
+drwxr-xr-x  <span class=m>3</span> selene selene 4,0K Des <span class=m>27</span> 20:39 Documents
+drwx------ <span class=m>23</span> selene selene 4,0K Des <span class=m>27</span> 12:59 Downloads
+drwxr-xr-x  <span class=m>2</span> selene selene 4,0K Des <span class=m>26</span> 22:10 Desktop
+drwxrwxrwx  <span class=m>3</span> selene selene 4,0K Des <span class=m>14</span> 08:27 Pictures
+drwxr-xr-x <span class=m>25</span> selene selene 4,0K Des  <span class=m>3</span> 11:40 dots
+drwxr-xr-x  <span class=m>5</span> selene selene 4,0K Des  <span class=m>3</span> 07:41 Dev
+lrwxrwxrwx  <span class=m>1</span> selene selene   <span class=m>13</span> Okt  <span class=m>3</span> 11:14 Music
+-rwxr-xr-x  <span class=m>0</span> selene selnee    <span class=m>0</span> Des <span class=m>28</span> 09:15 .file_tersembunyi</code></pre></div><p>Selengkapnya tentang <strong>ls</strong> &ldquo;$ man ls&rdquo;.</p><p><br></p><h3 id=membuat-directory>Membuat directory</h3><p>Gunakan perintah <strong>mkdir</strong>, akronim dari <em>make directory</em>.<br>Ganti <strong>inidir</strong>, dengan <strong>nama directory</strong> keinginan:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mkdir inidir
+$ ls
+Desktop  Documents  Downloads  inidir
+Pictures Dev        dots       Music</code></pre></div><p>Batch:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mkdir <span class=o>{</span>dirsatu,dirdua,dirtiga<span class=o>}</span></code></pre></div><p>Mengandung spasi, pakai tanda petik (quote) atau escape character:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mkdir <span class=s1>&#39;ini dir&#39;</span>
+
+$ mkdir <span class=s2>&#34;ini dir&#34;</span>
+
+$ mkdir ini<span class=se>\ </span>dir</code></pre></div><p><br></p><h3 id=membuat-file>Membuat file</h3><p>Gunakan perintah <strong>touch</strong>.<br>Ganti <strong>inifile</strong>, dengan <strong>nama file</strong> keinginan, kurang lebih sama dengan membuat directory:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ touch inifile</code></pre></div><p>Batch:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ touch <span class=o>{</span>filesatu,filedua,filetiga<span class=o>}</span></code></pre></div><p>Mengandung spasi, pakai tanda petik (quote) atau escape character:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ touch <span class=s1>&#39;ini file&#39;</span>
+
+$ touch <span class=s2>&#34;ini file&#34;</span>
+
+$ touch ini<span class=se>\ </span>file</code></pre></div><p><br></p><h3 id=menghapus-directory>Menghapus directory</h3><p>Gunakan perintah <strong>rmdir</strong>, akronim dari <em>remove directory</em>.<br>Jika directory tidak berisi file / directory:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ rmdir namadir</code></pre></div><p>Jika directory berisi file / directory lain didalamnya:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ rm -rf namadir</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ rm -rf dir1 dir2 dir3</code></pre></div><p><br></p><h3 id=menghapus-file>Menghapus file</h3><p>Gunakan perintah <strong>rm</strong>, akronim dari <em>remove</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ rm namafile</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ rm file1 file2 fil3</code></pre></div><p><br></p><h3 id=menyalin--copy-directory>Menyalin / copy directory</h3><p>Gunakan perintah <strong>mv</strong>, diikuti option <strong>-r</strong>, asal directory dan tujuan directory (atribut paling akhir), akronim dari <em>move</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mv -r namadir /tmp
+$ ls /tmp
+namadir</code></pre></div><p>Banyak directory:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mv -r dir1 dir2 dir3 /tmp
+$ ls /tmp
+dir1 dir2 dir3</code></pre></div><p><br></p><h3 id=menyalin--copy-file>Menyalin / copy file</h3><p>Gunakan perintah <strong>mv</strong>, asal file, tujuan directory, akronim dari <em>move</em>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mv inifile /tmp
+$ ls /tmp
+inifile</code></pre></div><p>Banyak file:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mv file1 file2 file3 /tmp
+$ ls /tmp
+file1 file2 file3</code></pre></div><p><br></p><h3 id=menganti-nama--rename-file-dan-directory>Menganti nama / rename file dan directory</h3><p>Gunakan perintah <strong>mv</strong>, perintah ini juga digunakan untuk mengganti nama / rename:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ touch fileku
+$ ls
+fileku
+
+$ mv fileku filemu
+$ ls
+filemu</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mkdir dirku
+$ ls
+dirku
+
+$ mv dirku dirmu
+$ ls
+dirmu</code></pre></div><p><br></p><h3 id=mengidentifikasi-suatu-file>Mengidentifikasi suatu file</h3><p>Gunakan perintah <strong>file</strong>, diikuti <strong>lokasi file</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ file Documents/print.pdf
+Documents/print.pdf: PDF document, version 1.4
+
+$ file Documents/video.mp4
+Documents/video.mp4: ISO Media, MP4 Base Media v1 <span class=o>[</span>IS0 14496-12:2003<span class=o>]</span>
+
+$ file music.mp3
+music.mp3: Audio file with ID3 version 2.2.0, contains:MPEG ADTS, layer III, v1, <span class=m>320</span> kbps, 44.1 kHz, Stereo
+
+$ file catatan.txt
+catatan: ASCII text</code></pre></div><p><br></p><h3 id=membaca-text-file>Membaca text file</h3><p>Dengan perintah <strong>cat</strong>, diikuti <strong>lokasi file</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ cat lokasi/file.txt
+satu
+dua
+tiga
+empat
+lima</code></pre></div><p>Membaca dari atas.<br>Dengan perintah <strong>head</strong>, diikuti option <strong>-n</strong>, lalu jumlah baris, lalu <strong>lokasi file</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ head -n <span class=m>3</span> file.txt
+satu
+dua
+tiga</code></pre></div><p>Membaca dari bawah.<br>Dengan perintah <strong>tail</strong>, diikuti option <strong>-n</strong>, lalu jumlah baris, lalu <strong>lokasi file</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tail -n <span class=m>3</span> file.txt
+tiga
+empat
+lima</code></pre></div><p>Dengan perintah <strong>less</strong>, untuk membaca file yang panjang:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ less file.txt</code></pre></div><p>Keluar dari <strong>less</strong>, tekan <strong>q</strong>.<br>Navigasi <strong>less</strong> dengan h-j-k-l, &ldquo;/&rdquo; untuk pencarian, <strong>less</strong> menggunakan vi binding.</p><p><br></p><h3 id=mencari-file--directory>Mencari file / directory</h3><p>Gunakah perintah <strong>find</strong>, diikuti lokasi, lalu option <strong>-name</strong>, lalu nama file / directory yang ingin dicari:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>pwd</span>
+/home/selene
+
+$ find . -name <span class=s1>&#39;*deo*&#39;</span>
+./Documents/video.mp4
+
+$ find . -name <span class=s1>&#39;catatan.txt&#39;</span>
+catatan.txt</code></pre></div><p><br></p><h3 id=mencari-file-yang-berisi--mengandung-suatu-kata-secara-rekursif>Mencari file yang berisi / mengandung suatu kata secara rekursif</h3><p>Gunakan perintah <strong>grep</strong>, diikuti option <strong>-Ril</strong>, lalu isi suatu string, lalu lokasi:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>pwd</span>
+/home/selene
+
+$ grep -Ril <span class=s1>&#39;satu&#39;</span> .
+./file.txt</code></pre></div><p><br></p><h3 id=file-archive-tar>File archive .tar</h3><p>Mengextract file archive <strong>.tar</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar xf file.tar</code></pre></div><p>Mengextract file archive <strong>.tar.gz</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar xzf file.tar.gz</code></pre></div><p>Membuat file <strong>.tar</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar cf namafile.tar *
+
+$ ls
+namafile.tar</code></pre></div><p>* = semua file & directory, di shell saat ini berada.</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar cf namafile.tar dirtujuan/
+
+$ ls
+namafile.tar</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar cf namafile.tar dir1/ dir2/ dir3/
+
+$ ls
+namafile.tar</code></pre></div><p>Membuat file <strong>.tar.gz</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar czf namafile.tar.gz *
+
+$ ls
+namafile.tar.gz</code></pre></div><p>* = semua file & directory, di shell saat ini berada.</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar czf namafile.tar.gz dirtujuan/
+
+$ ls
+namafile.tar.gz</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ tar czf namafile.tar.gz dir1/ dir2/ dir3/
+
+$ ls
+namafile.tar.gz</code></pre></div><p><br></p><h3 id=file-archive-zip>File archive .zip</h3><p>Mengextract file archive <strong>.zip</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ unzip file.zip</code></pre></div><p>Membuat file archive <strong>.zip</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ zip -r namafile.zip *</code></pre></div><p>* = semua file & directory, di shell saat ini berada.</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ zip -r namafile.zip dirtujuan/
+
+$ ls
+namafile.zip</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ zip -r namafile.zip dir1/ dir2/ dir3/
+
+$ ls
+namafile.zip</code></pre></div><p><br></p><h3 id=melihat-username-user-saat-ini>Melihat username user saat ini</h3><p>Gunakan perintah <strong>whoami</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ whoami
+selene</code></pre></div><p><br></p><h3 id=mengganti-password-user-saat-ini>Mengganti password user saat ini</h3><p>Gunakan perintah <strong>passwd</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ passwd</code></pre></div><p><br></p><h3 id=id-user-dan-group-saat-ini>ID user dan group saat ini</h3><p>Gunakan perintah <strong>id</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ id
+<span class=nv>uid</span><span class=o>=</span>1004<span class=o>(</span>selene<span class=o>)</span> <span class=nv>gid</span><span class=o>=</span>1008<span class=o>(</span>selene<span class=o>)</span> <span class=nv>groups</span><span class=o>=</span>1008<span class=o>(</span>selene<span class=o>)</span>,6<span class=o>(</span>disk<span class=o>)</span>,7<span class=o>(</span>lp<span class=o>)</span>,10<span class=o>(</span>wheel<span class=o>)</span>,19<span class=o>(</span>log<span class=o>)</span>,90<span class=o>(</span>network<span class=o>)</span>,91<span class=o>(</span>video<span class=o>)</span>,92<span class=o>(</span>audio<span class=o>)</span>,93<span class=o>(</span>optical<span class=o>)</span>,95<span class=o>(</span>storage<span class=o>)</span>,96<span class=o>(</span>scanner<span class=o>)</span>,97<span class=o>(</span>input<span class=o>)</span>,98<span class=o>(</span>power<span class=o>)</span>,100<span class=o>(</span>users<span class=o>)</span>,991<span class=o>(</span>beep<span class=o>)</span>,1002<span class=o>(</span>udev<span class=o>)</span>,1004<span class=o>(</span>fuse<span class=o>)</span></code></pre></div><p>fyi, uid=0 adalah user <strong>root</strong>.</p><p><br></p><h3 id=nama-hostname-perangkat>Nama hostname perangkat</h3><p>Gunakan perintah <strong>hostname</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ hostname
+gaia</code></pre></div><p><br></p><h3 id=info-kernel-perangkat>Info kernel perangkat</h3><p>Gunakan perintah <strong>uname</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ uname
+uname
+
+$ uname -ar
+Linux gaia 5.8.10-zen1-1-zen <span class=c1>#1 ZEN SMP PREEMPT Thu, 17 Sep 2020 21:47:26 +0000 x86_64 GNU/Linux</span></code></pre></div><p><br></p><h3 id=info-distro-gnulinux>Info distro gnu/linux</h3><p>Gunakan perintah berikut:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ cat /etc/issue</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ cat /etc/*-release</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ cat /proc/*version</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ lsb_release -a</code></pre></div><p><br></p><h3 id=melihat-daftar-partisi-storage-perangkat>Melihat daftar partisi storage perangkat</h3><p>Gunakan perintah <strong>fdisk</strong>, lalu diikuti option <strong>-l</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ fdisk -l</code></pre></div><p><br></p><h3 id=melihat-kapasitas-storage-perangkat>Melihat kapasitas storage perangkat</h3><p>Gunakan perintah <strong>df</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ df</code></pre></div><p>Secara human readable, byte ke satuan <strong>KB MB GB</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ df -h</code></pre></div><p><br></p><h3 id=melihat-penggunakan-storage-suatu-directory>Melihat penggunakan storage suatu directory</h3><p>Gunakan perintah <strong>du</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ du Documents
+534148	Documents
+
+$ du -h Documents
+522M	Documents</code></pre></div><p>Untuk interaktifnya, teman-teman bisa menginstall <strong>ncdu</strong>, <strong>ncdu</strong> menggunakan vi binding.</p><p><br></p><h3 id=melihat-riwayat--history-command-yang-telah-digunakan>Melihat riwayat / history command yang telah digunakan</h3><p>Gunakan perintah <strong>history</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ history</code></pre></div><p><br></p><h3 id=tanggal-saat-ini>Tanggal saat ini</h3><p>Gunakan perintah <strong>date</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ date
+Min <span class=m>27</span> Des <span class=m>2020</span> 09:17:22  WIB</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ date +<span class=s1>&#39;%d/%m/%y&#39;</span>
+27/12/20</code></pre></div><p>Selengkapnya &ldquo;$ man date&rdquo;</p><p><br></p><h3 id=perintah-man>Perintah man</h3><p>Perintah ini digunakan untuk melihat <strong>manual</strong> / petunjuk penggunaan suatu command.<br><strong>man</strong> biasanya sudah terinstall secara default di banyak distro.</p><p>Contoh penggunaan:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ man ls
+
+$ man cp
+
+$ man mv
+
+$ man mkdir</code></pre></div><p>Keluar <strong>man</strong> tekan &ldquo;q&rdquo;.</p><p><br></p><h3 id=lebih-lanjut-perintah-echo>Lebih lanjut, perintah echo</h3><p>Perintah ini digunakan untuk menuliskan sesuatu.</p><p>Contoh:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>echo</span> <span class=s1>&#39;saya ganteng&#39;</span>
+saya ganteng
+
+$ <span class=nb>echo</span> <span class=s1>&#39;saya ganteng\nbanget&#39;</span>
+saya ganteng
+banget</code></pre></div><p>Menuliskan ke suatu file, gunakan simbol lebih besar dari (>), diikuti lokasi file:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>echo</span> <span class=s1>&#39;saya ganteng&#39;</span> &gt; saya.txt
+
+$ cat saya.txt
+saya ganteng</code></pre></div><p>Replace isi suatu file, gunakan 2 simbol lebih besar dari (&#187;), diikuti lokasi file:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>echo</span> <span class=s1>&#39;kamu rupawan&#39;</span> &gt;&gt; saya.txt
+
+$ cat saya.txt
+kamu rupawan</code></pre></div><p><br></p><h3 id=lebih-lanjut-piping>Lebih lanjut, piping</h3><p>Piping ini istilahnya mirip dengan &ldquo;passing&rdquo; atau meng-oper-kan output suatu command ke command lain.<br>Piping ini menggunakan simbol | (pipe).</p><p>Contoh piping dari command <strong>ls</strong> untuk mencari suatu file dengan command <strong>grep</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ touch <span class=o>{</span>sayaganteng, kamuganteng, kitaganteng<span class=o>}</span>
+
+$ ls -hal <span class=p>|</span> grep <span class=s1>&#39;*ganteng*&#39;</span>
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 kamuganteng
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 kitaganteng
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 sayaganteng
+
+$ ls -hal <span class=p>|</span> grep <span class=s1>&#39;*saya*&#39;</span>
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 sayaganteng</code></pre></div><p>Membaca output panjang dengan command <strong>less</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -hal <span class=p>|</span> less
+
+$ cat /etc/hosts <span class=p>|</span> less
+
+$ fdisk -l <span class=p>|</span> less
+
+$ ps aux <span class=p>|</span> less</code></pre></div><p>Contoh chaining:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ls -hal <span class=p>|</span> grep <span class=s1>&#39;*ganteng*&#39;</span> <span class=p>|</span> less
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 kamuganteng
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 kitaganteng
+-rwxr-xr-x  <span class=m>4</span> selene selene 4,0K Des <span class=m>28</span> 09:25 sayaganteng</code></pre></div><p>Contoh membuat hash dengan md5:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>echo</span> -n <span class=s2>&#34;kitasemuaganteng&#34;</span> <span class=p>|</span> md5sum <span class=p>|</span> cut -c -32
+380f6aa4370afe22a6287c2c6f3c6acd</code></pre></div><p><br></p><h3 id=lebih-lanjut-chaining-dengan->Lebih lanjut, chaining dengan &&</h3><p>Chaining dari kata dasar <em>chain</em> yang berarti <em>rantai</em>, dengan chaining kita bisa melalukan banyak command bersamaan (berantai).</p><p>&& digunakan untuk kondisi &ldquo;jika command sebelumnya berhasil dijalankan & sukses, maka command selanjutnya akan dijalankan&rdquo;.</p><p>Contoh penggunaan:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ mkdir suatudir <span class=o>&amp;&amp;</span> ls <span class=p>|</span> grep dir
+suatudir
+
+$ inicommandsalah suatudir <span class=o>&amp;&amp;</span> ls <span class=p>|</span> grep dir
+<span class=nb>command</span> not found: inicommandsalah</code></pre></div><p><br></p><h3 id=lebih-lanjut-chaining-dengan--1>Lebih lanjut, chaining dengan ;</h3><p>Mirip dengan &&, tapi<br>; digunakan untuk kondisi &ldquo;jika command sebelumnya sukses atau tidak sukses dijalankan, maka command selanjutnya akan tetap dijalankan&rdquo;.</p><p>Contoh penggunaan:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ inicommandsalah suatudir<span class=p>;</span> ls
+zsh: <span class=nb>command</span> not found: inicommandsalah
+Desktop  Documents  Downloads  Pictures
+Dev	 dots	    Music</code></pre></div><p><br></p><h3 id=lebih-lanjut-kill-process>Lebih lanjut, kill process</h3><p>Gunakan perintah <strong>pgrep</strong>, untuk mencari <strong>process ID</strong> (PID) suatu program.</p><p>Misal, saya ingin mencari <strong>process ID</strong> program <strong>mupdf</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ pgrep mupdf
+<span class=m>8721</span></code></pre></div><p>Atau saya bisa mencari dengan perintah <strong>ps aux</strong>, kolom kedua adalah <strong>process ID</strong> (PID):</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ ps aux <span class=p>|</span> grep mupdf
+selene   <span class=m>8721</span>   1.2  0.4  <span class=m>53948</span> <span class=m>15912</span> pts/9    S+   10:52   0:00 mupdf Documents/print.pdf
+selene   <span class=m>29112</span>  0.0  0.0   <span class=m>7364</span>  <span class=m>2328</span> pts/7    S+   10:52   0:00 grep mupdf
+
+$ ps aux <span class=p>|</span> less</code></pre></div><p><strong>8721</strong>, adalah <strong>process ID</strong> program tersebut yang sedang berjalan.<br>Selanjutnya saya kill process / menghentikan paksa dengan:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>kill</span> -9 <span class=m>8721</span></code></pre></div><p>Selengkapnya tentang command <strong>kill</strong>, cek &ldquo;$ man kill&rdquo;.</p><p><br></p><h3 id=eskalasi-hak-akses-super-user--root>Eskalasi hak akses super user / root</h3><p>Eskalasi hak akses super user digunakan untuk melakukan suatu command yang membutuhkan hak akses super user, karena hak akses super user adalah yang tertinggi, super user juga bisa melalukan modifikasi pada system.</p><p>Login dengan akun super user, gunakan perintah <strong>su</strong>, tekan enter, lalu masukan password akun super user:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ whoami
+selene
+$ su
+Password:
+<span class=c1># whoami</span>
+root
+<span class=c1># id</span>
+<span class=nv>uid</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span> <span class=nv>gid</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span> <span class=nv>groups</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span></code></pre></div><p>Passing command dengan <strong>su</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ su -c <span class=s1>&#39;ls&#39;</span>
+Desktop  Documents  Downloads  Pictures
+Dev	 dots	    Music</code></pre></div><p>Dengan tools <strong>sudo</strong>, <strong>sudo</strong> biasanya sudah ada di distro sebagai tools default untuk eskalasi hak akses super user, akronim dari <em>superuser do</em>.<br>Gunakan command <strong>sudo</strong>, diikuti suatu command yang ingin dijalankan, enter, lalu masukkan password user yang sekarang:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ whoami
+selene
+$ sudo su
+<span class=o>[</span>sudo<span class=o>]</span> password <span class=k>for</span> selene:
+<span class=c1># whoami</span>
+root
+<span class=c1># id</span>
+<span class=nv>uid</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span> <span class=nv>gid</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span> <span class=nv>groups</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span></code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ sudo <span class=s1>&#39;ls&#39;</span>
+<span class=o>[</span>sudo<span class=o>]</span> password <span class=k>for</span> selene:
+Desktop  Documents  Downloads  Pictures
+Dev	 dots	    Music</code></pre></div><p>Dengan tools <strong>doas</strong>, <strong>doas</strong> ini mirip dengan <strong>sudo</strong>:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ doas <span class=s1>&#39;ls&#39;</span>
+doas <span class=o>(</span>selene@gaia<span class=o>)</span> password:
+Desktop  Documents  Downloads  Pictures
+Dev	 dots	    Music</code></pre></div><p><br></p><h3 id=tips-dengan-aliases>Tips dengan aliases</h3><p>Teman-teman bisa menggunakan alias untuk menyingkat suatu command / perintah.</p><p>Contoh:</p><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>alias</span> <span class=nv>cls</span><span class=o>=</span><span class=s1>&#39;clear&#39;</span>
+$ cls</code></pre></div><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>$ <span class=nb>alias</span> <span class=nv>ll</span><span class=o>=</span><span class=s1>&#39;ls -hal&#39;</span>
+$ ll</code></pre></div><p>Teman-teman bisa menyimpankan ke file konfigurasi alias, seperti <strong>~/.aliases</strong> atau <strong>~/.bash_aliases</strong>, sehingga bisa persisten.</p><p><br></p><h3 id=penutup>Penutup</h3><p>Demikian <strong>perintah / command dasar gnu/linux</strong>, semoga isi post ini bisa bermanfaat buat teman-teman semua.</p></article><hr><div><div class="single-next-prev left"></div><div class="single-next-prev right"><a class=blue-text href=/blog/mengaktifkan-syntax-highlight-di-hugo/><i class="right material-icons">arrow_forward</i>Cara mengaktifkan syntax...</a></div><div style=clear:both></div></div><div id=disqus_thread></div><script>(function(){if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='himawari466-blog';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script></main><aside class="col m12 l4"><div class=card><div class=card-content><h5><i class="tiny material-icons">alarm</i> Post Terbaru:</h5><ul class=a-con><li><i class="tiny material-icons">label</i> <a href=/blog/perintah-dasar-linux/>Belajar perintah dasar Linux</a></li><li><i class="tiny material-icons">label</i> <a href=/blog/mengaktifkan-syntax-highlight-di-hugo/>Cara mengaktifkan syntax highlight Markdown di Hugo</a></li><li><i class="tiny material-icons">label</i> <a href=/blog/konfigurasi-zsh-di-arch-linux/>Konfigurasi zsh di Arch Linux dan mengaktifkan vi-mode</a></li></ul><hr><h5><i class="tiny material-icons">local_offer</i> Tags:</h5><div><a class="btn btn-tag red darken-4 waves-effect waves-light" href=/tags/linux>Linux [2]</a>
+<a class="btn btn-tag red darken-4 waves-effect waves-light" href=/tags/hugo>Hugo [1]</a>
+<a class="btn btn-tag red darken-4 waves-effect waves-light" href=/tags/zsh>Zsh [1]</a></div></div></div></aside></div><div class=center><i class="tiny material-icons">arrow_drop_up</i>
+<a href=#><small>ke atas</small></a>
+<i class="tiny material-icons">arrow_drop_up</i></div></div><footer class="page-footer red lighten-5 black-text"><div class=container><div class=row><div class="col m6 l6 s12"><p><b>Terakhir update:</b><br>Senin, 28 Desember 2020. 11:39:08 WIB.</p><hr><p>Seluruh konten tulisan yang saya tulis disini berlisensikan<br><a class=indigo-text target=_blank href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id><u>Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional<br>(CC BY-NC-SA 4.0)</u></a>. <a target=_blank href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id><img src=/assets/images/cc_by-nc-sa.svg width=100 alt="CC BY-NC-SA 4.0"></a><br><br>Konten lain mungkin tunduk pada lisensi lain.</p></div><div class="col m6 l4 offset-l2 s12"><p><small>Situs ini dibuat dengan <b>Hugo v0.79.1-EDB9248D</b>.<br>Dihosting dengan <b>GitHub Pages</b>.<br>Ditulis menggunakan text editor <b>neovim</b>, diatas sistem operasi <b>Arch Linux</b>.<br></small></p><table><tr style=border:none><td class=center-align><a href=//gohugo.io/ target=_blank><img src=/assets/images/Hugo-Logo.svg width=100 alt=Hugo></a></td><td class=center-align><a href=//pages.github.com/ target=_blank><img src=/assets/images/GitHub-Logo.png width=100 alt="GitHub Pages"></a></td></tr><tr style=border:none><td class=center-align><a href=//neovim.io/ target=_blank><img src=/assets/images/Neovim-Logo.svg width=100 alt=Neovim></a></td><td class=center-align><a href=//archlinux.org/ target=_blank><img src=/assets/images/archlinux-Logo.svg width=100 alt=archlinux></a></td></tr></table></div></div></div><div class="footer-copyright red darken-2"><div class=container>&copy; 2020
+<a class="grey-text text-lighten-4 right" href=#>himawari466.github.io</a></div></div></footer><script src=/assets/js/materialize.min.js></script><script>M.AutoInit();</script></body></html>

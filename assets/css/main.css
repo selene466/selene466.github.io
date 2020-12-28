@@ -119,3 +119,5 @@ article a, article a:visited, .a-con a, .a-con a:visited {
 article a:hover, .a-con a:hover, .btn-tag:hover {
   color: #FF4444;
 }
+
+kbd { background: palegreen; padding: 3px; border 1 px solid green; }
