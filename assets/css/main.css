@@ -112,12 +112,41 @@ strong {
   font-weight: bold;
 }
 
+article p a::after {
+  content: " \1F86D";
+}
+
 article a, article a:visited, .a-con a, .a-con a:visited {
   color: #4444FF;
 }
 
 article a:hover, .a-con a:hover, .btn-tag:hover {
   color: #FF4444;
+}
+
+article ul li::before {
+  content: "- \00a0";
+  font-weight: bold
+}
+
+figure {
+  padding: 5px;
+}
+
+figure img {
+  margin: 5px;
+  box-shadow: 0px 3px 3px #000;
+}
+
+figure figcaption {
+  padding: 5px;
+  font-family: 'mononoki', monospace;
+  font size: .9rem;
+}
+
+figure figcaption::before {
+  content: "figur: ";
+  font-weight: bold;
 }
 
 kbd { background: palegreen; padding: 3px; border 1 px solid green; }
