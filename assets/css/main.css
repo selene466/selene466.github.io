@@ -113,7 +113,9 @@ strong {
 }
 
 article p a::after {
-  content: " \1F86D";
+  content: " \2197";
+  font-size: .9rem;
+  font-weight: bold;
 }
 
 article a, article a:visited, .a-con a, .a-con a:visited {
